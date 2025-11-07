@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development DB_USERNAME=root DB_PASSWORD=amaechi@2000 DB_DATABASE=homescout DB_HOST=localhost PORT=8000 nodemon index.js",
-    "start:prod": "cross-env NODE_ENV=production MYSQLDATABASE=railway MYSQL_ROOT_PASSWORD=xPgZKJUAVctZHvQTsaOtVROTdNToUlaz MYSQL_URL=mysql://root:xPgZKJUAVctZHvQTsaOtVROTdNToUlaz@mysql.railway.internal:3306/railway MYSQLHOST=mysql.railway.internal MYSQLPASSWORD=xPgZKJUAVctZHvQTsaOtVROTdNToUlaz MYSQLPORT=3306 MYSQLUSER=root PORT=8000 node index.js",
-    "start": "npm run start:prod",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "build": "echo 'No build step needed for Express server'"
   },
   "engines": {
@@ -24,7 +23,6 @@
     "sequelize-cli": "^6.6.3"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "nodemon": "^3.1.10"
   }
 }
